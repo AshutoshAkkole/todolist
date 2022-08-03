@@ -26,6 +26,7 @@ h1 {
 .item {
   min-height: 70px;
   display: flex;
+  position: relative;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
 }
@@ -56,7 +57,7 @@ form {
   margin-left: 20px;
 }
 
-button {
+button{
   min-height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -67,6 +68,7 @@ button {
   padding-bottom: 6px;
   border-width: 0;
 }
+
 
 input[type="text"] {
   text-align: center;
@@ -93,4 +95,10 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+img{
+  width: 8%;
+  position: absolute;
+  right: 14px;
+  bottom: 21px;
 }

@@ -78,6 +78,28 @@ app.post("/addtolist", function (req, response) {
     }
 });
 
+app.get("/delete/:task",function(req,res){
+    const day = new Date();
+
+
+    const option = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    }
+    let today = day.toLocaleDateString("en-US", option);
+
+    mongoosedb.List.updateOne({date:today},{$pull:{tasks:req.params.task}},(err)=>{
+        if(err)
+        {
+            console.log("oops! error\n",err);
+        }else{
+            // res.send("deleted successfully");
+            res.redirect("/");
+        }
+    })
+});
+
 app.listen(process.env.PORT || 3000, function () {
     console.log("port 3000 stated");
 });
