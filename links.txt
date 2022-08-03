@@ -1,0 +1,3 @@
+MONGOSH SHELL
+mongosh "mongodb+srv://personalblog.pu5noqr.mongodb.net/myFirstDatabase" --apiVersion 1 --username AshutoshAkkole
+https://todolist-ashu.herokuapp.com/
